@@ -1,0 +1,30 @@
+{% extends "port/index.html" %}
+{% block body %}
+<div class="pcolor">
+
+    <section class="view">
+        <div class="pcontainer">
+            <div class="details">
+                <h1 class="h1 margin">{{project_data.0.name}}</h1>
+                <h2 class="margin">Description</h2>
+                <p class="data font">{{project_data.0.description}}</p>
+                <h2 class="margin" >Funtionalitites</h2>
+                <p class="data">
+                <p class="font">{{project_data.0.functionalities}}</p>
+                </p>
+                <h2 class="margin">Languages Used</h2>
+                <p class="font">{{project_data.0.languages_used}}</p>
+                <a class="download" href="{{project_data.0.git_link}}">Download</a> <a href="{{project_data.0.live_link}}"><span class="mx-2 badge bg-dark">Go Live</span></a> <br>
+                <a href="/" type="button" class="btn btn-danger margin">Back</a>
+            </div>
+            <div class="images">
+                <h2>Screenshots</h2>
+                <img src="/media/{{project_data.0.sample1}}" alt="">
+                <img src="/media/{{project_data.0.sample2}}" alt="">
+                <img src="/media/{{project_data.0.sample3}}" alt="">
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

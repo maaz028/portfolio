@@ -1,0 +1,1481 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="shortcut icon" type="image" href="{% static 'port/man.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+
+    <!-- library for alert -->
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@200;300&family=Anton&display=swap');
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    html,
+    body {
+
+        overflow-inline: clip;
+        overflow-x: clip;
+
+    }
+
+    :root {
+        --color: white;
+        --font-family: 'Lobster', cursive;
+        --font-family2: 'Open Sans Condensed', sans-serif;
+        --font-family: 'Alumni Sans', sans-serif;
+        --font-family4: 'Anton', sans-serif;
+        --background: #f00;
+        --height: 22px;
+        --text-shadow: 0px 0px 10px black;
+        --box-shadow :  0px 0px 5px black;
+    }
+
+    /* navigation menu */
+
+    .navbar-dark .navbar-nav .nav-link:focus,
+    .navbar-dark .navbar-nav .nav-link:hover {
+        color: white;
+    }
+
+    .navbar {
+        background: none !important;
+        font-family: var(--font-family4) !important;
+        box-shadow: 0px 0px 10px black;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    .navbar-brand {
+        font-size: 23px;
+    }
+
+    .navbar::before {
+        content: '';
+        background-color: black !important;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.3;
+
+    }
+
+    .pic {
+        width: 36px;
+        border-radius: 25px;
+    }
+
+    /* end */
+    #head2 {
+        margin-top: 196px;
+        color: white;
+        font-size: 4.3rem;
+        padding-right: 12px;
+        margin-right: 329px;
+        z-index: 1;
+        font-family: var(--font-family4);
+        text-shadow: 0px 0px 10px black;
+    }
+
+    .main {
+        font-family: var(--font-family4);
+        text-shadow: 0px 0px 10px black;
+
+    }
+
+    .content {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 400px;
+    }
+
+
+    .content p {
+        width: 813px;
+        margin: 10px;
+        z-index: 1;
+        text-align: center;
+        color: var(--color);
+        font-family: var(--font-family);
+        font-size: 37px;
+
+    }
+
+    .content h1 {
+        text-shadow: var(--text-shadow);
+        z-index: 1;
+
+
+        color: var(--color);
+        font-size: 5.4rem;
+
+    }
+
+    #home::before {
+        content: '';
+        position: absolute;
+        background: url('{% static "port/back.jpg" %}') no-repeat center center/cover;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.8;
+
+    }
+
+    #home {
+        position: relative;
+        height: 600px;
+
+
+    }
+
+
+    .color {
+
+        background-color: black;
+        z-index: -1;
+    }
+
+
+
+
+    .abouth1 {
+        font-family: var(--font-family);
+        font-size: 70px;
+        font-weight: bold;
+        margin-top: 54px;
+        text-align: center;
+        color: gray;
+    }
+
+    #about {
+        text-shadow: var(--text-shadow);
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 100px;
+
+        color: white;
+
+        margin: auto;
+
+        position: relative;
+    }
+
+    #about::before {
+        content: '';
+        position: absolute;
+        background: url('{% static "port/picabout.jpg" %}') no-repeat center center/cover;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.6;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+    }
+
+    .skills_details {
+        position: relative;
+        z-index: 1;
+        padding: 55px;
+        font-family: var(--font-family);
+    }
+
+    #skills::before {
+        content: '';
+        position: absolute;
+        background: url('{% static "port/skill_background.jpg" %}') no-repeat center center/cover;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.6;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+    }
+
+    #skills {
+        margin-top: 100px;
+        color: rgb(255, 255, 255);
+        margin: auto;
+        position: relative;
+    }
+
+    .skillimg {
+        width: 38px;
+    }
+
+    .skill {
+        font-size: 26px;
+        margin-left: 10px;
+        font-family: var(--font-family3);
+        font-weight: bold;
+    }
+
+    .sk {
+        display: flex;
+
+        margin-top: 10px;
+    }
+
+    .bar {
+        box-shadow: 0px 0px 5px black;
+        font-weight: bold;
+        height: var(--height);
+        margin-top: 10px;
+        text-align: center;
+
+    }
+
+    #django .bar {
+        width: 800px;
+        text-shadow: var(--text-shadow);
+        background-color: #03ae03cf;
+        border-radius: 20px;
+        margin-left: 67px;
+
+    }
+
+    #python .bar {
+        text-align: center;
+        width: 800px;
+        text-shadow: var(--text-shadow);
+        background-color: #03ae03cf;
+        border-radius: 20px;
+        margin-left: 67px;
+
+
+    }
+
+    #html .bar {
+        text-align: center;
+        width: 700px;
+        text-shadow: var(--text-shadow);
+        background-color: #ff009bd6;
+        border-radius: 20px;
+
+        margin-left: 69px;
+
+    }
+
+    #css .bar {
+        text-align: center;
+        width: 700px;
+        text-shadow: var(--text-shadow);
+        background-color: #ff009bd6;
+        border-radius: 20px;
+
+        margin-left: 80px;
+
+    }
+
+    #javascript .bar {
+        text-align: center;
+        width: 600px;
+        text-shadow: var(--text-shadow);
+        background-color: #cac700e3;
+        border-radius: 20px;
+
+        margin-left: 40px;
+
+    }
+
+    .cimg {
+        position: relative;
+        width: 399px;
+        border-radius: 20px;
+        z-index: 1;
+        vertical-align: baseline;
+        box-shadow: 1px 0px 88px #01b7ff87;
+        transition: width 0.2s linear;
+        ;
+
+
+    }
+    .cimg:hover{
+    width: 450px;
+}
+    .text {
+        width: 758px;
+        font-size: 27px;
+        font-family: var(--font-family);
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        text-shadow: var(--text-shadow);
+    }
+
+    .icon {
+        margin: 5px;
+        width: 46px;
+    }
+
+    .cont {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .icond {
+        margin-left: 28px;
+    }
+
+    .text h1 {
+        text-shadow: 0px 0px 10px black;
+        font-weight: bold !important;
+    }
+
+    #contact {
+
+
+        position: relative;
+        z-index: 1;
+
+
+    }
+
+    .input {
+        width: 500px;
+        height: 40px;
+
+        font-size: 21px;
+        font-family: 'Maven Pro', sans-serif;
+        padding: 2px;
+        margin: 11px;
+        color: white;
+        background: none;
+        outline: none;
+        border: 2px solid #a8aaa9;
+        border-radius: 4px;
+        border: 10px 2px -6px;
+        box-shadow: -1px 7px 13px rgb(143, 142, 142), 1px -5px 13px rgb(126, 124, 124);
+        transition: all 300ms;
+    }
+
+    .input:hover {
+        box-shadow: -1px 7px 13px rgb(99, 95, 95), 1px -5px 13px rgb(99, 95, 95);
+    }
+
+    .input:focus {
+        box-shadow: -1px 7px 13px rgb(83, 206, 255), 1px -5px 13px rgb(83, 206, 255);
+    }
+
+    #contact::before {
+        content: '';
+        position: absolute;
+        background: url('{% static "port/contact.jpg" %}') no-repeat center center/cover;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.6;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+
+    .badge {
+        text-shadow: 0px 0px 2px black;
+    }
+
+    .contact {
+        font-size: 34px;
+        margin-top: 54px;
+        margin-bottom: 54px;
+        text-align: center;
+        color: gray;
+    }
+
+    form {
+        position: relative;
+        text-align: center;
+
+        z-index: 1;
+    }
+
+    #portfolio {
+        position: relative;
+
+    }
+
+    #portfolio::before {
+        content: '';
+        position: absolute;
+        background: url('{% static "port/projectsb.jpg" %}') no-repeat center center/cover;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.6;
+        filter: blur(2px);
+        -webkit-filter: blur(4px);
+    }
+
+    .imgsection {
+        width: 58px;
+        vertical-align: baseline;
+    }
+
+    .colorr {
+        background-color: black;
+        z-index: -1;
+    }
+
+    .btn {
+        box-shadow: var(--box-shadow);
+        width: 200px;
+    }
+
+    .display {
+        display: flex;
+    }
+
+    .card {
+        box-shadow: var(--text-shadow);
+        margin: auto;
+        width: 18rem;
+        background: none;
+        border-color: white;
+        color: white;
+        font-family: var(--font-family);
+        font-size: 20px;
+        text-shadow: var(--text-shadow);
+    }
+
+    .badge {
+        margin-bottom: 13px;
+        font-size: 16px;
+        box-shadow: var(--box-shadow)
+    }
+
+    .badge2 {
+        margin-bottom: -6px;
+        font-size: 21px;
+        box-shadow: var(--box-shadow)
+    }
+
+    .card-title {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .card img {
+        height: 159px;
+        padding: 5px;
+    }
+
+    .line {
+        border-radius: 10px;
+        width: 150px;
+        background-color: rgb(0, 183, 255);
+        height: 5px;
+        margin: auto;
+        margin-bottom: 36px;
+        animation: line 1s infinite alternate-reverse;
+    }
+
+    @keyframes line {
+        from {
+            width: 100px;
+        }
+
+        to {
+            width: 150px;
+        }
+    }
+
+    #main {
+        animation: fade 1s infinite alternate-reverse;
+        font-family: var(--font-family4);
+    }
+
+    @keyframes fade {
+        from {
+            font-size: 37px;
+        }
+
+        to {
+            font-size: 56px;
+        }
+    }
+
+    .preloader {
+        position: fixed;
+        overflow-y: hidden;
+        width: 100%;
+        height: 100vh;
+        background: url('{% static "port/ghost.gif" %}') no-repeat center;
+        background-color: rgb(255, 255, 255);
+        z-index: 1000;
+    }
+
+
+    #main {
+        animation: fade 1s infinite alternate-reverse;
+
+    }
+
+    /* project view */
+
+    .view {
+        position: relative;
+        color: white;
+        z-index: 1;
+    }
+
+    .view::before {
+        content: '';
+        background: url('{% static "port/projectsb.jpg" %}') no-repeat center center/cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        z-index: 0;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+
+        opacity: 0.8;
+
+    }
+
+    .pcolor {
+        background-color: black;
+        height: 100%;
+
+    }
+
+    .h1 {
+        position: relative;
+        z-index: 1;
+        font-weight: bold;
+        font-family: var(--font-family);
+
+    }
+
+    .pcontainer {
+        padding-top: 40px;
+        position: relative;
+        z-index: 1;
+        margin-left: 40px;
+        font-family: var(--font-family);
+        display: flex;
+    }
+
+    /* justify-content: center;
+    align-items: center; */
+
+    .data {
+        width: 600px;
+       
+
+    }
+
+    .details {
+        padding: 22px;
+        /* border: 2px solid white; */
+        border-radius: 20px;
+        text-shadow: var(--text-shadow);
+        
+    }
+
+    .images {
+        padding: 20px;
+        /* border: 2px solid white; */
+        margin-left: 42px;
+        border-radius: 20px;
+        width: 546px;
+    }
+
+    .images img {
+        margin-top: 10px;
+        width: 499px;
+        box-shadow: 1px 0px 10px #00000087;
+        height: 200px;
+        border-radius: 10px;
+    }
+
+    .font {
+        font-size: 25px;
+    }
+
+    .margin {
+        margin-top: 20px;
+    }
+
+    html {
+        left: 0px;
+        margin-bottom: 0px;
+    }
+
+    footer {
+        height: 63px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6.5rem;
+        background-color: rgba(0, 0, 0, 0.815);
+        color: white;
+        font-family: var(--font-family);
+font-size: 25px;
+
+    }
+
+    footer span {
+        margin-left: 50px;
+        font-weight: bold;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer div img {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 40px;
+        height: 38px;
+        filter: invert(100%);
+        transition: box-shadow 0.5s;
+
+    }
+
+    .button {
+        font-family: var(--font-family);
+        width: 138px;
+    }
+
+    ::placeholder {
+        color: white;
+    }
+
+    footer div img:hover {
+        box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    }
+
+    .button {
+        margin-bottom: 30px;
+    }
+
+    /* phone */
+    @media screen and (max-width:768px) and (min-width:768px) {
+
+
+        .abouth1 {
+            font-size: 56px;
+        }
+
+        .imgsection {
+            width: 44px;
+        }
+
+        @keyframes line {
+            from {
+                width: 100px;
+            }
+
+            to {
+                width: 150px;
+            }
+
+        }
+
+        #about {
+            flex-direction: column;
+        }
+
+        .cimg {
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .pcontainer {
+            flex-direction: column;
+            margin-left: 10px;
+            padding-top: 0px;
+        }
+
+        .h1 {
+            margin-top: 0px;
+        }
+
+        .data {
+            width: 500px;
+        }
+
+        .font {
+            width: 500px;
+        }
+
+        .images {
+            padding: 0px;
+            margin-left: 10px;
+
+        }
+
+        .images img {
+            width: 500px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        .view::before,
+        .pcolor {
+            height: 100%;
+        }
+
+        #django .bar {
+            width: 400px;
+
+
+        }
+
+        #python .bar {
+
+            width: 400px;
+
+
+
+        }
+
+        #html .bar {
+            text-align: center;
+            width: 350px;
+
+
+        }
+
+        #css .bar {
+            text-align: center;
+            width: 350px;
+
+
+        }
+
+        #javascript .bar {
+            text-align: center;
+            width: 300px;
+
+
+        }
+
+        .col-md-4 {
+            width: 100%;
+        }
+    }
+
+
+    @media screen and (min-width:360px) and (max-width:540px) {
+        ul {
+            padding-left: 0px;
+        }
+
+        .container {
+            justify-content: center;
+            max-width: 103%;
+            width: 103%;
+            overflow: hidden;
+        }
+
+        #head2 {
+            margin-left: 100px;
+            font-size: 3.3rem;
+
+        }
+
+        .main {
+            margin-left: 0px;
+            font-size: 63px;
+
+        }
+
+        @keyframes fade {
+            from {
+                font-size: 18px;
+            }
+
+            to {
+                font-size: 28px;
+            }
+        }
+
+        .content h1 {
+            margin-top: -33px;
+        }
+
+        .abouth1 {
+            font-size: 40px;
+        }
+
+        .imgsection {
+            width: 33px;
+        }
+
+        .line {
+
+            animation: line 1s infinite alternate-reverse;
+        }
+
+        @keyframes line {
+            from {
+                width: 50px;
+            }
+
+            to {
+                width: 100px;
+            }
+
+        }
+
+        #about {
+            flex-direction: column;
+        }
+
+        .cimg {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            width: 317px;
+        }
+
+        .text {
+            font-size: 18px;
+            width: 378px;
+        }
+
+        form {
+            width: 100%;
+
+        }
+
+        .badge {
+            font-size: 16px !important;
+        }
+
+        .input {
+            width: 312px;
+        }
+
+        .button {
+            margin-top: 19px;
+        }
+
+        footer {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 86px;
+        }
+
+        footer span {
+            font-size: 12px;
+            margin-left: 0px;
+        }
+
+        footer div img {
+            margin: 6px;
+            width: 32px;
+            height: 32px;
+
+        }
+
+        .pcontainer {
+            flex-direction: column;
+            margin-left: 10px;
+            padding-top: 0px;
+        }
+
+        .h1 {
+            margin-top: 0px;
+        }
+
+        .data {
+            width: 310px;
+        }
+
+        .font {
+            width: 310px;
+        }
+
+        .images {
+            padding: 0px;
+            margin-left: 10px;
+
+        }
+
+        .images img {
+            width: 320px;
+            margin-bottom: 20px;
+        }
+
+        .view::before,
+        .pcolor {
+            height: 100%;
+        }
+
+        .icon {
+            width: 33px;
+        }
+
+        .bar {
+            font-size: 10px;
+            margin-top: 7px;
+            height: 14px;
+        }
+
+        .skill {
+            font-size: 18px;
+        }
+
+        .skillimg {
+            width: 23px;
+        }
+
+        .skills_details {
+            padding: 15px;
+        }
+
+        #django .bar {
+            width: 200px;
+            margin-left: 56px;
+
+        }
+
+        #python .bar {
+
+            width: 200px;
+            margin-left: 56px;
+
+        }
+
+        #html .bar {
+            text-align: center;
+            width: 175px;
+            margin-left: 58px;
+
+        }
+
+        #css .bar {
+            text-align: center;
+            width: 175px;
+            margin-left: 66px;
+
+        }
+
+        #javascript .bar {
+            text-align: center;
+            width: 150px;
+            margin-left: 38px;
+
+        }
+        
+        .details h2{
+            font-size: 30px;
+        }
+        footer div span{
+            font-size: 18px;
+        }
+    }
+
+
+    @media screen and (max-width:320px) {
+        ul {
+            padding-left: 0px;
+        }
+
+        .container {
+            justify-content: center;
+            max-width: 103%;
+            width: 103%;
+            overflow: hidden;
+        }
+
+        #head2 {
+            margin-left: 100px;
+            font-size: 3.3rem;
+
+        }
+
+        .main {
+            margin-left: 0px;
+            font-size: 63px;
+
+        }
+
+        @keyframes fade {
+            from {
+                font-size: 18px;
+            }
+
+            to {
+                font-size: 28px;
+            }
+        }
+
+        .content h1 {
+
+            margin-top: -33px;
+        }
+
+        .abouth1 {
+            font-size: 40px;
+        }
+
+        .imgsection {
+            width: 33px;
+        }
+
+        .line {
+
+            animation: line 1s infinite alternate-reverse;
+        }
+
+        @keyframes line {
+            from {
+                width: 50px;
+            }
+
+            to {
+                width: 100px;
+            }
+
+        }
+
+        #about {
+            flex-direction: column;
+        }
+
+        .cimg {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        .text {
+            font-size: 14px;
+            width: 326px;
+        }
+
+        form {
+            width: 100%;
+
+        }
+
+        .input {
+            width: 293px;
+        }
+
+        .button {
+            margin-top: 19px;
+        }
+
+        footer {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 86px;
+        }
+
+        footer span {
+            font-size: 13px;
+            margin-left: 0px;
+        }
+
+        footer div img {
+            margin: 6px;
+            width: 32px;
+            height: 32px;
+
+        }
+
+        .pcontainer {
+            flex-direction: column;
+            margin-left: 10px;
+            padding-top: 0px;
+        }
+
+        .h1 {
+            margin-top: 0px;
+        }
+
+        .data {
+            width: 310px;
+        }
+
+        .font {
+            width: 275px;
+        }
+
+        .images {
+            padding: 0px;
+            margin-left: 10px;
+
+        }
+
+        .images img {
+            width: 280px;
+            margin-bottom: 20px;
+        }
+
+        .view::before,
+        .pcolor {
+            height: 100%;
+        }
+
+        .bar {
+            font-size: 10px;
+            margin-top: 7px;
+            height: 14px;
+        }
+
+        .skill {
+            font-size: 18px;
+        }
+
+        .skillimg {
+            width: 23px;
+        }
+
+        .skills_details {
+            padding: 15px;
+        }
+
+        #django .bar {
+            width: 150px;
+            margin-left: 56px;
+
+        }
+
+        #python .bar {
+
+            width: 150px;
+            margin-left: 55px;
+
+        }
+
+        #html .bar {
+            text-align: center;
+            width: 140px;
+            margin-left: 55px;
+
+        }
+
+        #css .bar {
+            text-align: center;
+            width: 140px;
+            margin-left: 64px;
+
+        }
+
+        #javascript .bar {
+            text-align: center;
+            width: 120px;
+            margin-left: 39px;
+
+        }
+
+    }
+</style>
+
+
+<body>
+
+    <!-- loader -->
+    <div class="preloader"></div>
+
+    {% block body %}
+
+    <div class="bcolor">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" ><img class="navbar-brand pic" src="{% static 'port/navpic.jpg'%}"
+                        alt=""> MY PORTFOLIO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#aboutvisit">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio_section">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact-section">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <div class="color">
+        <section id="home">
+            <div class="content" data-aos="fade-right">
+                <h2 id="head2">I'm</h2>
+                <h1><span class="main">Maaz</span> <span class="main" style="color: red;">Khan</span></h1>
+                <p id="main" class="main">Full Stack Web Developer</p>
+
+            </div>
+        </section>
+    </div>
+    <div id="aboutvisit">
+        <div style="text-align:center;margin-top:54px">
+            <img class="imgsection" src="{% static 'port/about.png' %}" alt=""> <span class="abouth1"> About</span>
+            <div class="line"></div>
+        </div>
+        <div class="color">
+
+            <section id="about">
+                <div class="text" data-aos="fade-right">
+                    <h1>Introduction</h1>
+                    <p>My name is Maaz Khan a Full Stack Web Developer and Software Engineer. I have one year of
+                        experience in Web Developer ,my experties lie in the following languages which includes (HTML 5,
+                        CSS, JavaScript, Python and Django). If you want a top level Website do not hesitate to contact.
+                        Below You will find some of my cool projects along with the source code. </p><br>
+                    <h1>Contact</h1>
+                    {% comment %} <h3>Skills</h3>
+                    <p style="margin-bottom: 30px;">Python, MySQL, HTML, CSS, JavaScript, Django</p> {% endcomment %}
+
+                    <div class="cont">
+
+                        <img class="icon" src="{% static 'port/gmail.png' %}" alt="">
+                        <div class="icond"><span class="badge bg-danger badge2">kmaaz3542@gmail.com</span></div>
+                    </div>
+                    <div class="cont">
+                        <img class="icon" src="{% static 'port/telephone.png' %}" alt="">
+                        <div class="icond"><span class="badge bg-primary badge2">0347 - 1158730</span></div>
+
+                    </div>
+                </div>
+                <div style="display: flex;justify-content:center;align-items:center" data-aos="fade-right">
+                    <img class="cimg" src="{% static 'port/maaz.jpg' %}" alt="">
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="skillsvisit">
+        <div style="text-align:center;margin-top:54px">
+            <img class="imgsection" src="{% static 'port/skills.png' %}" alt=""> <span class="abouth1"> Skills</span>
+            <div class="line"></div>
+        </div>
+        <div class="color">
+
+            <section id="skills">
+                <div class="skills_details" data-aos="fade-right">
+                    <div class="sk" id="python">
+                        <div> <img class="skillimg" src="{% static 'port/python.png' %}" alt=""></div>
+                        <div class="skill"> Python</div>
+                        <div class="bar">80%</div>
+                    </div>
+                    <div class="sk" id="html">
+                        <div><img class="skillimg" src="{% static 'port/html-5.png' %}" alt=""></div>
+                        <div class="skill"> HTML5</div>
+                        <div class="bar">70%</div>
+                    </div>
+                    <div class="sk" id="css">
+                        <div><img class="skillimg" src="{% static 'port/css-3.png' %}" alt=""></div>
+                        <div class="skill"> CSS3</div>
+                        <div class="bar">70%</div>
+                    </div>
+                    <div class="sk" id="javascript">
+                        <div><img class="skillimg" src="{% static 'port/javascript.png' %}" alt=""></div>
+                        <div class="skill"> JavaScript</div>
+                        <div class="bar">60%</div>
+                    </div>
+                    <div class="sk" id="django">
+                        <div><img class="skillimg" src="{% static 'port/python.png' %}" alt=""></div>
+                        <div class="skill"> Django</div>
+                        <div class="bar">80%</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="portfolio_section" style="text-align:center;margin-top:54px">
+        <img class="imgsection" src="{% static 'port/portfolio.png' %}" alt=""> <span class="abouth1"> Portfolio</span>
+        <div class="line"></div>
+    </div>
+    <div class="color">
+
+        <section id="portfolio">
+
+            <div class="row">
+                {% for project in project %}
+
+
+                <div class="my-4 col-md-4 text-center">
+                    <div class="card" data-aos="fade-right">
+                        <img src="/media/{{project.sample1}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{project.name}}</h5>
+                            <p class="card-text">{{project.description|truncatechars:150}}</p>
+                            <span class="badge bg-danger">{{project.languages_used}}</span>
+                            <a href="/project/{{project.id}}" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+
+
+        </section>
+    </div>
+
+    <div style="text-align:center;margin-top:54px" id="contact-section">
+        <img class="imgsection" src="{% static 'port/contacts.png' %}" alt=""><span class="abouth1"> Reach Out</span>
+        <div class="line"></div>
+    </div>
+    <div class="colorr">
+
+        <section id="contact">
+            <form action="/contact" method="post" data-aos="fade-right"> {% csrf_token %}
+
+                <input name="name" style="margin-top: 85px;" class="input" type="text" placeholder="Name" required><br>
+                <input name="email" class="input" type="email" placeholder="Email" required><br>
+                <input name="phone" class="input" type="text" placeholder="Phone#" required><br>
+                <input name="address" class="input" type="text" placeholder="Address" required><br>
+                <textarea name="query" class="input" placeholder="Provide your Query" id="" cols="30" rows="30"
+                    required></textarea><br>
+
+
+                <button type="submit" class="btn btn-success button butt">Submit</button>
+                <button type="reset" class="btn btn-danger button butt">Clear</button>
+            </form>
+        </section>
+    </div>
+
+
+    <footer>
+
+        <div>
+            <span>© 2021 maazkhan.pythonanywhere.com, All Rights Reserved.</span>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/profile.php?id=100006197073727t"><img style="border-radius: 30px;"
+                    src="{% static 'port/fb.png' %}" alt=""></a>
+            <a href="https://www.instagram.com/__its_maxi/"><img src="{% static 'port/instagram.png' %}" alt=""></a>
+        </div>
+        </div>
+
+
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+</body>
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+        let loader = document.querySelector('.preloader')
+        loader.style.display = 'none';
+
+        AOS.init({
+            offset: 120,
+            duration: 1000,
+            mirror: true,
+        });
+
+        function confirmation() {
+            sweetAlert(
+                'Good job!',
+                'Your form has been submitted!',
+                'success'
+            )
+        }
+        function incorrect() {
+            sweetAlert(
+                'Invalid Details!',
+                'Provide valid details!',
+                'error'
+            )
+        }
+
+
+
+        {% if correct %}
+        confirmation()
+        {% endif %}
+        {% if incorrect %}
+        incorrect()
+        {% endif %}
+
+
+
+
+
+
+
+    })
+</script>
+
+
+</html>

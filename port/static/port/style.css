@@ -1,0 +1,1008 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@200;300&family=Anton&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,body {
+ 
+    overflow-inline: clip;
+    overflow-x: clip;
+
+}
+
+:root {
+    --color: white;
+    --font-family : 'Lobster', cursive;
+    --font-family2: 'Open Sans Condensed', sans-serif;
+    --font-family: 'Alumni Sans', sans-serif;
+    --font-family4: 'Anton', sans-serif;
+    --background:#f00;
+    --height:22px;
+    --text-shadow: 0px 0px 10px black;
+}
+
+/* navigation menu */
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
+    color: white;
+}
+.navbar{
+    background: none !important;
+    font-family: var(--font-family4) !important;
+    box-shadow: 0px 0px 10px black;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.navbar-brand{
+    font-size: 23px;
+}
+.navbar::before{
+    content: '';
+    background-color: black !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.3;
+   
+}
+.pic{
+    width: 36px;
+    border-radius: 25px;
+}
+/* end */
+#head2 {
+    margin-top: 196px;
+    color: white;
+    font-size: 4.3rem;
+    padding-right: 12px;
+    margin-right: 329px;
+    z-index: 1;
+    font-family: var(--font-family4);
+    text-shadow: 0px 0px 10px black;
+}
+.main{
+    font-family:var(--font-family4);
+    text-shadow: 0px 0px 10px black;
+
+}
+.content {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+}
+
+
+.content p {
+    width: 813px;
+    margin: 10px;
+    z-index: 1;
+    text-align: center;
+    color: var(--color);
+    font-family: var(--font-family);
+    font-size: 37px;
+
+}
+
+.content h1 {
+    text-shadow: var(--text-shadow);
+    z-index: 1;
+    
+
+    color: var(--color);
+    font-size: 5.4rem;
+
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    background: url('./back.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.8;
+    
+}
+
+#home {
+    position: relative;
+    height: 600px;
+
+
+}
+
+
+.color {
+
+    background-color: black;
+    z-index: -1;
+}
+
+
+
+
+.abouth1 {
+    font-family: var(--font-family);
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 54px;
+    text-align: center;
+    color: gray;
+}
+
+#about {
+    text-shadow: var(--text-shadow);
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+
+    color: white;
+
+    margin: auto;
+
+    position: relative;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    background: url('./picabout.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.6;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.skills_details{
+    position: relative;
+    z-index: 1;
+    padding: 55px;
+    font-family: var(--font-family);
+}
+#skills::before {
+    content: '';
+    position: absolute;
+    background: url('./skill_background.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.6;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+#skills{
+    margin-top: 100px;
+    color: rgb(255, 255, 255);
+    margin: auto;
+    position: relative;
+}
+.skillimg{
+    width: 38px;
+}
+
+.skill{
+    font-size: 26px;
+    margin-left: 10px;
+    font-family: var(--font-family3);
+    font-weight: bold;
+}
+.sk{
+    display: flex;
+    
+   margin-top: 10px;
+}
+.bar{
+    box-shadow: 0px 0px 5px black;
+    font-weight: bold;
+    height: var(--height);
+    margin-top: 10px;
+    text-align: center;
+
+}
+#django .bar{
+    width: 880px;
+    text-shadow: var(--text-shadow);
+background-color: #03ae03cf;
+border-radius: 20px;
+
+
+margin-left: 68px;
+
+}
+#python .bar{
+    text-align: center;
+    width: 800px;
+    text-shadow: var(--text-shadow);
+    background-color: #03ae03cf;
+border-radius: 20px;
+margin-left: 65px;
+
+
+}
+
+#html .bar{text-align: center;
+    width: 700px;
+    text-shadow: var(--text-shadow);
+    background-color: #ff009bd6;
+border-radius: 20px;
+
+margin-left: 68px;
+
+}
+#css .bar{text-align: center;
+    width: 700px;
+    text-shadow: var(--text-shadow);
+    background-color: #ff009bd6;
+border-radius: 20px;
+    
+margin-left: 80px;
+
+}
+#javascript .bar{text-align: center;
+    width: 600px;
+    text-shadow: var(--text-shadow);
+    background-color: #cac700e3;
+border-radius: 20px;
+
+margin-left: 40px;
+
+}
+.cimg {
+    position: relative;
+    width: 399px;
+    border-radius: 20px;
+    z-index: 1;
+    vertical-align: baseline;
+    box-shadow: 1px 0px 88px #01b7ff87;;
+
+
+}
+
+.text {
+    width: 758px;
+    font-size: 27px;
+    font-family: var(--font-family);
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-shadow: var(--text-shadow);
+}
+
+.icon {
+    margin: 5px;
+    width: 46px;
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+
+}
+
+.icond {
+    margin-left: 28px;
+}
+
+.text h1{
+    text-shadow: 0px 0px 10px black;
+    font-weight: bold !important;
+}
+#contact {
+
+
+    position: relative;
+    z-index: 1;
+    
+
+}
+
+.input {
+    width: 500px;
+    height: 40px;
+
+    font-size: 21px;
+    font-family: 'Maven Pro', sans-serif;
+    padding: 2px;
+    margin: 11px;
+    color: white;
+    background: none;
+    outline: none;
+    border: 2px solid #a8aaa9;
+    border-radius: 4px;
+    border: 10px 2px -6px;
+    box-shadow: -1px 7px 13px rgb(143, 142, 142), 1px -5px 13px rgb(126, 124, 124);
+    transition: all 300ms;
+}
+
+.input:hover {
+    box-shadow: -1px 7px 13px rgb(99, 95, 95), 1px -5px 13px rgb(99, 95, 95);
+}
+
+.input:focus {
+    box-shadow: -1px 7px 13px rgb(83, 206, 255), 1px -5px 13px rgb(83, 206, 255);
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    background: url('./contact.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.6;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+.badge{
+    text-shadow: 0px 0px 2px black;
+}
+.contact {
+    font-size: 34px;
+    margin-top: 54px;
+    margin-bottom: 54px;
+    text-align: center;
+    color: gray;
+}
+
+form {
+    position: relative;
+    text-align: center;
+
+    z-index: 1;
+}
+
+#portfolio {
+    position: relative;
+
+}
+
+#portfolio::before {
+    content: '';
+    position: absolute;
+    background: url('./projectsb.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.6;
+    filter: blur(2px);
+    -webkit-filter: blur(4px);
+}
+
+.imgsection {
+    width: 58px;
+    vertical-align: baseline;
+}
+
+.colorr {
+    background-color: black;
+    z-index: -1;
+}
+
+.btn {
+
+    width: 200px;
+}
+.display{
+    display: flex;
+}
+.card{
+    box-shadow: var(--text-shadow);
+    margin: auto;
+    width: 18rem;
+   background:none;
+   border-color: white;
+   color: white;
+   font-family: var(--font-family);
+   font-size: 20px;
+   text-shadow: var(--text-shadow);
+}
+.badge{
+    margin-bottom: 13px;
+font-size: 16px;
+}
+.card-title{
+    font-weight: bold;
+    font-size: 25px;
+}
+.card img{
+    height: 159px;
+    padding: 5px;
+}
+.line {
+    border-radius: 10px;
+    width: 150px;
+    background-color: rgb(0, 183, 255);
+    height: 5px;
+    margin: auto;
+    margin-bottom: 36px;
+    animation: line 1s infinite alternate-reverse;
+}
+@keyframes line{
+    from{
+        width:100px;
+    }
+    to{
+        width:150px;
+    }
+}
+
+#main{
+    animation: fade 1s infinite alternate-reverse;
+    font-family: var(--font-family4);
+}
+@keyframes fade {
+    from{
+        font-size: 37px;
+    }
+    to{
+        font-size: 56px;
+    }
+}
+.preloader{
+    position: fixed;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100vh;
+    background: url('./Fidget-spinner.gif') no-repeat center;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+}
+
+
+#main{
+    animation: fade 1s infinite alternate-reverse;
+
+}
+
+/* project view */
+
+.view
+{
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+.view::before{
+    content: '';
+    background: url('./project_view.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+   z-index: 0;
+ -webkit-filter: blur(2px);
+
+    opacity: 0.8;
+
+}
+.pcolor{
+    background-color: black;
+    height: 100%;
+    
+}
+.h1{
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    font-family: var(--font-family);
+    
+}
+.pcontainer{
+    padding-top: 40px;
+    position: relative;
+    z-index: 1;
+    margin-left: 40px;
+    font-family: var(--font-family);
+    display: flex;
+}
+    /* justify-content: center;
+    align-items: center; */
+
+.data{
+    width: 600px;
+    
+}
+.details{
+    padding: 22px;
+/* border: 2px solid white; */
+border-radius: 20px;
+}
+.images
+{
+    padding: 20px;
+/* border: 2px solid white; */
+margin-left: 42px;
+border-radius: 20px;
+width: 546px;
+}
+
+.images img{
+    margin-top: 10px;
+    width: 499px;
+    box-shadow: 1px 0px 88px #01b7ff87;
+height: 200px;
+border-radius: 10px;
+}
+.font{
+    font-size: 20px;
+}
+.margin{
+    margin-top: 20px;
+}
+html{
+    left: 0px;
+    margin-bottom: 0px;
+}
+footer{
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6.5rem;
+    background-color: rgba(0, 0, 0, 0.815);
+    color: white;
+    
+}
+
+ footer span{
+    margin-left: 50px;
+    font-weight: bold;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer div img{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 40px;
+    height: 38px;
+    filter: invert(100%);
+    transition: box-shadow 0.5s;
+    
+}
+.button{
+    font-family: var(--font-family);
+    width: 138px;
+}
+::placeholder{
+    color: white;
+}
+footer div img:hover{
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+.button{
+    margin-bottom: 30px;
+}
+/* phone */
+@media screen and (max-width:768px) and (min-width:768px) {
+    
+    
+    .abouth1{
+        font-size: 56px;
+    }
+    .imgsection{
+        width: 44px;
+    }
+    @keyframes line {
+        from{
+            width: 100px;
+        }
+        to{
+            width: 150px;
+        }
+        
+    }
+    #about{
+        flex-direction: column;
+    }
+    .cimg{
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+   
+      .pcontainer{
+        flex-direction: column;
+        margin-left: 10px;
+        padding-top: 0px;
+    }
+    .h1{
+        margin-top: 0px;
+    }
+    .data
+    {
+        width: 500px;
+    }
+    .font{
+        width: 500px;
+    }
+    .images{
+        padding: 0px;
+        margin-left: 10px;
+        
+    }
+    .images img{
+        width: 500px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    .view::before,.pcolor{
+        height: 100%;
+    }
+    #django .bar{
+        width: 400px;
+    
+    
+    }
+    #python .bar{
+ 
+        width: 400px;
+     
+    
+    
+    }
+    
+    #html .bar{text-align: center;
+        width: 350px;
+      
+    
+    }
+    #css .bar{text-align: center;
+        width: 350px;
+     
+    
+    }
+    #javascript .bar{text-align: center;
+        width: 300px;
+       
+    
+    }
+    .card{
+        width: 30rem;
+    }
+    .col-md-4{
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width:360px) and (max-width:540px){
+    ul{
+        padding-left: 0px;
+    }
+
+    .container{
+        justify-content: center;
+        max-width: 103%;
+        width: 103%;
+        overflow: hidden;
+    }
+    #head2{
+        margin-left: 100px;
+        font-size: 3.3rem;
+      
+    }
+    .main{
+        margin-left: 0px;
+        font-size: 63px;
+        
+    }
+    @keyframes fade {
+        from{
+            font-size: 18px;
+        }   
+        to{
+            font-size: 28px;
+        }     
+    }
+    .content h1{
+        margin-top: -33px;
+    }
+    .abouth1{
+        font-size: 40px;
+    }
+    .imgsection{
+        width: 33px;
+    }
+    .line{
+        
+        animation: line 1s infinite alternate-reverse;
+    }
+    @keyframes line {
+        from{
+            width: 50px;
+        }
+        to{
+            width: 100px;
+        }
+        
+    }
+    #about{
+        flex-direction: column;
+    }
+    .cimg{
+        margin-bottom: 20px;
+        border-radius: 10px;
+        width: 317px;
+    }
+  
+    .text{
+        font-size: 18px;
+width: 349px;
+    }
+    form{
+        width: 100%;
+        
+    }
+    .badge{
+        font-size: 16px !important;
+    }
+    .input{
+        width: 312px;
+    }
+    .button{
+        margin-top: 19px;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 86px;
+    }
+    footer span{
+        font-size: 12px;
+        margin-left: 0px;
+    }
+    footer div img{
+        margin: 6px;
+width: 32px;
+height: 32px;
+
+    }
+    .pcontainer{
+        flex-direction: column;
+        margin-left: 10px;
+        padding-top: 0px;
+    }
+    .h1{
+        margin-top: 0px;
+    }
+    .data
+    {
+        width: 310px;
+    }
+    .font{
+        width: 310px;
+    }
+    .images{
+        padding: 0px;
+        margin-left: 10px;
+        
+    }
+    .images img{
+        width: 320px;
+        margin-bottom: 20px;
+    }
+    .view::before,.pcolor{
+        height: 100%;
+    }
+    .icon{
+        width: 33px;
+    }
+    .bar{
+        font-size: 10px;
+        margin-top: 7px;
+        height:14px;
+    }
+    .skill{
+        font-size: 18px;
+    }
+    .skillimg{
+        width: 23px;
+    }
+    .skills_details{
+        padding: 15px;
+    }
+    #django .bar{
+        width: 200px;
+        margin-left: 58px;
+        
+    }
+    #python .bar{
+ 
+        width: 200px;
+        margin-left: 55px;
+    
+    }
+    
+    #html .bar{text-align: center;
+        width: 175px;
+        margin-left: 59px;
+    
+    }
+    #css .bar{text-align: center;
+        width: 175px;
+        margin-left: 68px;
+    
+    }
+    #javascript .bar{text-align: center;
+        width: 150px;
+
+    
+    }
+    
+}
+
+
+@media screen and (max-width:320px){
+    ul{
+        padding-left: 0px;
+    }
+
+    .container{
+        justify-content: center;
+        max-width: 103%;
+        width: 103%;
+        overflow: hidden;
+    }
+    #head2{
+        margin-left: 100px;
+        font-size: 3.3rem;
+      
+    }
+    .main{
+        margin-left: 0px;
+        font-size: 63px;
+        
+    }
+    @keyframes fade {
+        from{
+            font-size: 18px;
+        }   
+        to{
+            font-size: 28px;
+        }     
+    }
+    .content h1{
+        
+        margin-top: -33px;
+    }
+    .abouth1{
+        font-size: 40px;
+    }
+    .imgsection{
+        width: 33px;
+    }
+    .line{
+        
+        animation: line 1s infinite alternate-reverse;
+    }
+    @keyframes line {
+        from{
+            width: 50px;
+        }
+        to{
+            width: 100px;
+        }
+        
+    }
+    #about{
+        flex-direction: column;
+    }
+    .cimg{
+        margin-bottom: 20px;
+        border-radius: 10px;
+        width: 300px;
+    }
+   
+    .text{
+        font-size: 14px;
+width: 326px;
+    }
+    form{
+        width: 100%;
+        
+    }
+    .input{
+        width: 293px;
+    }
+    .button{
+        margin-top: 19px;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 86px;
+    }
+    footer span{
+        font-size: 13px;
+        margin-left: 0px;
+    }
+    footer div img{
+        margin: 6px;
+width: 32px;
+height: 32px;
+
+    }
+    .pcontainer{
+        flex-direction: column;
+        margin-left: 10px;
+        padding-top: 0px;
+    }
+    .h1{
+        margin-top: 0px;
+    }
+    .data
+    {
+        width: 310px;
+    }
+    .font{
+        width: 275px;
+    }
+    .images{
+        padding: 0px;
+        margin-left: 10px;
+        
+    }
+    .images img{
+        width: 280px;
+        margin-bottom: 20px;
+    }
+    .view::before,.pcolor{
+        height: 100%;
+    }
+    .bar{
+        font-size: 10px;
+        margin-top: 7px;
+        height:14px;
+    }
+    .skill{
+        font-size: 18px;
+    }
+    .skillimg{
+        width: 23px;
+    }
+    .skills_details{
+        padding: 15px;
+    }
+    #django .bar{
+        width: 150px;
+        margin-left: 55px;
+        
+    }
+    #python .bar{
+ 
+        width: 150px;
+        margin-left: 55px;
+    
+    }
+    
+    #html .bar{text-align: center;
+        width: 140px;
+        margin-left: 55px;
+    
+    }
+    #css .bar{text-align: center;
+        width: 140px;
+        margin-left: 74px;
+    
+    }
+    #javascript .bar{text-align: center;
+        width: 120px;
+
+    
+    }
+    
+}
